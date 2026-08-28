@@ -1,0 +1,103 @@
+.destinations{
+    padding: 60px 8px;
+    text-align: center;
+    background-color: #f5f9fc;
+}
+.destinations h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.subtitle{
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.destination-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.destination-card{
+    width: 280;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgb(0, 0,0,0.15);
+    transition: 0.3s;
+}
+.destination-card:hover{
+    transform: translateY(-8px);
+}
+
+.destination-card img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+
+}
+.destination-card h3{
+    font-size: 23px;
+    margin: 15px 0 8px;
+}
+
+.destination-card p{
+    padding: 0 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.destination-card button{
+    margin: 10px 0 20px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background-color: #0077b6;
+    color: white;
+    cursor: pointer;
+}
+
+.destination-card button:hover{
+    background-color: #023e8a;
+}
+
+@media(max-width:900px){
+    .destination-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .destinations h2{
+        font-size: 28px;
+    }
+}
+.destination-card{
+    transition: transform 0.4s ease,box-shadow 0.4s ease;
+    animation: cardFadeIn 1s ease forwards;
+}
+.destination-card:hover{
+    transform: translateY(-12) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.20);
+}
+.destination-card img{
+    transition: transform 0.5s ease;
+}
+.destination-card:hover img{
+   transform: scale(1.08);
+}
+@keyframes cardFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.destination-card button{
+    transition: 0.3s;
+}
+.destination-card button:hover{
+    transform: scale(1.08);
+}

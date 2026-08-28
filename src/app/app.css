@@ -1,0 +1,91 @@
+.footer{
+    background-color: #023e8a;
+    color: white;
+    padding-top: 45px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 8% 35px;
+}
+.footer-box{
+    width: 30%;
+}
+.footer-box h3{
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.footer-box p{
+    line-height: 1.6;
+}
+.footer-box a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+.footer-box a:hover{
+    text-decoration: underline;
+}
+.footer-bottom{
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+.footer-bottom p{
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.footer {
+    animation: footerFadeIn 1.2s ease;
+}
+
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.footer-box a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: 0.3s ease;
+}
+
+.footer-box a:hover {
+    color: #90e0ef;
+    transform: translateX(8px);
+}
+.footer-box p {
+    transition: 0.3s ease;
+}
+
+.footer-box p:hover {
+    transform: translateX(8px);
+    color: #90e0ef;
+}
+.footer-box h3 {
+    transition: 0.3s ease;
+}
+
+.footer-box h3:hover {
+    transform: translateY(-3px);
+}
+.footer-bottom {
+    transition: 0.3s ease;
+}
+
+.footer-bottom:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

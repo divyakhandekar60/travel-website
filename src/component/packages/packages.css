@@ -1,0 +1,111 @@
+.packages{
+    padding: 60px 8px;
+    text-align: center;
+    background-color: white;
+}
+
+.packages h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.package-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+.package-card{
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0, 0, 0.15);
+    background-color: #f8fbff;
+    transition: 0.3s;
+}  
+.package-card:hover{
+    transform: translateY(-8px);
+}
+
+.package-card h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.price{
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.package-card ul{
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    line-height: 2;
+}
+.package-card button{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #0077b6;
+    color: white;
+    cursor: pointer;
+}
+
+.package-card button:hover{
+    background-color: #023e8a;
+}
+/*Tablet*/
+@media(max-width:900px){
+    .package-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/*Mobile*/
+@media(max-width:600px){
+    .package-container{
+        grid-template-columns: 1fr;
+    }
+}
+.packages h2{
+    font-size: 28px;
+}
+.package-card{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: packageFadeIn 1s ease forwards;
+}
+.package-card:hover{
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.20);
+}
+@keyframes packageFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.package-card .price{
+    transition: 0.3s;
+}
+.package-card:hover{
+    transform: scale(1.08);
+}
+.package-card button{
+    transition: 0.3s;
+}
+.package-card button:hover{
+    transform: scale(1.08);
+}
+.package-card:nth-child(1){
+    animation-delay: 0.2s;
+}
+.package-card:nth-child(2){
+    animation-delay: 0.4s;
+}
+.package-card:nth-child(3){
+    animation-delay: 0.6s;
+}
